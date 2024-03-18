@@ -1,0 +1,121 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+/* Specific card styles */
+.card.spotify .card-content {
+    background-color: green;
+    color: white;
+}
+
+.card.amazon-music .card-content {
+    background-color:lightblue;
+    color: white;
+}
+
+.card.apple-music .card-content {
+    background-color: #FF2D55;
+    color: white;
+}
+
+.card.tidal .card-content {
+    background-color: #121212;
+    color: white;
+}
+
+.card.youtube .card-content {
+    background-color: #FF0000;
+    color: white;
+}
+
+.card.pandora .card-content {
+    background-color: #005483;
+    color: white;
+}
+
+.card.deezer .card-content {
+    background-color: purple;
+    color: white;
+}
+
+.card.peloton .card-content {
+    background-color: #000000;
+    color: white;
+}
+
+.card.facebook .card-content {
+    background-color: #4267B2;
+    color: white;
+}
+
+.card.google-play .card-content {
+    background-color: #3DB050;
+    color: white;
+}
+
+.row-divider {
+    margin-bottom: 20px;
+}
+
+/* Media query for mobile layout */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}

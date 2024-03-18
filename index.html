@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .border-highlight {
+            border: 2px solid black;
+        }
+        .green-highlight {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="filters">
+            <label for="filter">Filter:</label>
+            <select id="filter" onchange="applyFilter(this.value)">
+                <option value="all">All</option>
+                <option value="market-share">Top Three by Market Share</option>
+                <option value="artist-payout">Top Three by Artist Payout</option>
+            </select>
+        </div>
+        
+        <!-- Cards Section -->
+        <div class="card-section">
+            <div class="card-row">
+                <!-- Card 1 -->
+                <div class="card spotify">
+                    <div class="card-header">
+                        <img src="Spotify_Logo_CMYK_Green.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 44.33%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00348 per stream</p>
+                        <p>streams per song: 175</p>
+                        <p>streams per album: 1,752</p>
+                    </div>
+                </div>
+                <!-- Repeat the card structure for the remaining cards -->
+                <!-- Card 2 -->
+                <div class="card amazon-music">
+                    <div class="card-header">
+                        <img src="Amazon_Music_logo.svg.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 1.6%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00426 per stream</p>
+                        <p>streams per song: 143</p>
+                        <p>streams per album: 1,431</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card apple-music">
+                    <div class="card-header">
+                        <img src="applemusic.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 24.79%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00675 per stream</p>
+                        <p>streams per song: 90</p>
+                        <p>streams per album: 902</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card tidal">
+                    <div class="card-header">
+                        <img src="tidal.svg.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 0.58%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00876 per stream</p>
+                        <p>streams per song: 70</p>
+                        <p>streams per album: 695</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card youtube">
+                    <div class="card-header">
+                        <img src="youtube.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 1.7%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00154 per stream</p>
+                        <p>streams per song: 395</p>
+                        <p>streams per album: 3,947</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-divider"></div>
+            <div class="card-row">
+                <!-- Repeat the card-row structure for the second row -->
+                <!-- Card 6 -->
+                <div class="card pandora">
+                    <div class="card-header">
+                        <img src="pandora.svg.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 2.54%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.0203 per stream</p>
+                        <p>streams per song: 299</p>
+                        <p>streams per album: 2,993</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="card deezer">
+                    <div class="card-header">
+                        <img src="deezer.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 2.58%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00562 per stream</p>
+                        <p>streams per song: 54</p>
+                        <p>streams per album: 542</p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="card peloton">
+                    <div class="card-header">
+                        <img src="Peloton-logo-768x432.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 1.28%</h1>
+                    </div>
+                    <div class="card-content"> 
+                        <p>pays out artists $0.03107 per stream</p>
+                        <p>streams per song: 20</p>
+                        <p>streams per album: 196</p>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="card facebook">
+                    <div class="card-header">
+                        <img src="Facebook-Logo-2019.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 1.56%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.05705 per stream</p>
+                        <p>streams per song: 11 </p>
+                        <p>streams per album: 107 </p>
+                    </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="card google-play">
+                    <div class="card-header">
+                        <img src="Google-Play-Logo-768x432.png" alt="Logo" class="card-logo">
+                        <h1>Market Share: 2.54%</h1>
+                    </div>
+                    <div class="card-content">
+                        <p>pays out artists $0.00544 per stream</p>
+                        <p>streams per song: 110</p>
+                        <p>streams per album: 1,099</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <script>
+    function applyFilter(value) {
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.classList.remove('border-highlight');
+            card.classList.remove('green-highlight');
+        });
+
+        if (value === 'market-share') {
+            document.querySelectorAll('.spotify, .apple-music, .amazon-music').forEach(card => {
+                card.classList.add('border-highlight');
+            });
+        } else if (value === 'artist-payout') {
+            document.querySelectorAll('.peloton, .facebook, .tidal').forEach(card => {
+                card.classList.add('green-highlight');
+            });
+        }
+    }
+</script>
